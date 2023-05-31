@@ -1,4 +1,13 @@
+# SASS
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+
+# Node
+node_modules
+
+
+# IDE
+# Jetbrains
+.idea

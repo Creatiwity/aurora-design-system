@@ -1,0 +1,26 @@
+{
+  "name": "aurora-design-system",
+  "version": "1.0.0",
+  "description": "Aurora Design System",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Creatiwity/aurora-design-system"
+  },
+  "main": "index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Creatiwity",
+  "license": "MIT",
+  "files": [
+    "index.scss",
+    "src",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "bootstrap": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.6"
+  }
+}
