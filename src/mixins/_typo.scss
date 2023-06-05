@@ -1,0 +1,46 @@
+@import "../variables";
+
+@mixin generate-heading-styles($sizes) {
+  @each $size, $properties in $sizes {
+    &-#{$size} {
+      @each $property, $value in $properties {
+        #{$property}: $value;
+      }
+      font-weight: 600;
+    }
+  }
+}
+
+@mixin generate-display-styles($sizes) {
+  @each $size, $properties in $sizes {
+    &-#{$size} {
+      @each $property, $value in $properties {
+        #{$property}: $value;
+      }
+      font-family: $font-family-playfair;
+      letter-spacing: 0;
+    }
+  }
+}
+
+@mixin generate-label-styles($sizes) {
+  @each $size, $properties in $sizes {
+    &-#{$size} {
+      @each $property, $value in $properties {
+        #{$property}: $value;
+      }
+      letter-spacing: 0;
+    }
+  }
+}
+
+@mixin generate-paragraph-styles($sizes) {
+  @each $size, $properties in $sizes {
+    &-#{$size} {
+      @each $property, $value in $properties {
+        #{$property}: $value;
+      }
+      letter-spacing: 0;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import "../variables";
+
+a {
+  text-underline-offset: 5px;
+  background-color: transparent;
+  font-weight: 500;
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 30%;
+  }
+
+  &.link {
+    line-height: 20px;
+    gap: 8px;
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    &.link-lg {
+      font-size: 20px;
+      line-height: 24px;
+
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &.link-sm {
+      font-size: 14px;
+      line-height: 16px;
+
+      .icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+.link-primary {
+  color: $primary !important;
+  text-decoration-color: $primary-300 !important;
+
+  &:hover {
+    color: $primary !important;
+    text-decoration-color: $primary !important;
+  }
+
+  &:active {
+    color: $primary-700 !important;
+    text-decoration-color: $primary-700 !important;
+  }
+}
+
+.link-secondary {
+  color: $black !important;
+  text-decoration-color: $transparency-black-30 !important;
+
+  &:hover {
+    color: $black !important;
+    text-decoration-color: $black !important;
+  }
+
+  &:active {
+    color: $black !important;
+    text-decoration-color: $black !important;
+  }
+}

@@ -1,0 +1,223 @@
+.input-section {
+  .form-label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 12px;
+    line-height: 24px;
+
+    .optional {
+      margin-left: auto;
+      color: $neutrals-700;
+      font-size: 11px;
+      line-height: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .form-control {
+    line-height: 28px;
+    box-sizing: border-box;
+
+    &:hover {
+      border-color: $neutrals-700;
+    }
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  .form-select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    min-height: $input-height;
+
+    &:hover {
+      border-color: $neutrals-700;
+    }
+
+    .icon {
+      position: absolute;
+      right: $input-padding-x;
+      transition: transform .2s ease-in-out;
+    }
+
+    .form-select-value {
+      user-select: none;
+    }
+
+    .form-select-placeholder {
+      user-select: none;
+      color: $neutrals-700
+    }
+
+
+    &.active {
+      border-color: $primary;
+      box-shadow: 0 0 0 4px rgba($primary, 0.15);
+
+      .icon {
+        transform: rotate(180deg);
+      }
+
+      .form-select-options {
+        display: flex;
+      }
+    }
+  }
+
+  .form-select-options {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    position: absolute;
+    top: add($input-height, 5px);
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: $white;
+    padding: 10px 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    left: 0;
+    z-index: 10;
+
+    .option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 16px;
+      width: 100%;
+      &:hover {
+        background-color: $neutrals-200;
+      }
+
+      &.selected {
+        background-color: $neutrals-300;
+      }
+
+      &.disabled {
+        opacity: 30%;
+      }
+    }
+  }
+
+  .form-control-leading-selector {
+    display: flex;
+    height: $input-height;
+    border-radius: $input-border-radius;
+    transition: box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      .leading-selector, .form-control {
+        border-color: $neutrals-700;
+      }
+    }
+
+    &:has(.form-control:focus) {
+      .leading-selector, .form-control {
+        border-color: $primary;
+      }
+
+      .form-control {
+        box-shadow: none;
+      }
+      box-shadow: 0 0 0 4px rgba($primary, 0.15);
+    }
+
+    .leading-selector {
+      position: relative;
+      display: flex;
+      align-content: center;
+      padding: 10px 12px;
+      border: 1px solid $input-border-color;
+      border-right: none;
+      border-radius: 10px 0 0 10px;
+      background-color: $neutrals-300;
+      color: $neutrals-700;
+      height: 100%;
+      transition: border-color 0.15s ease-in-out;
+
+      &.active {
+        .form-select-options {
+          display: flex;
+        }
+      }
+    }
+
+    .form-control {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+
+  .input-section-message {
+    width: 100%;
+    padding: 12px;
+    color: $neutrals-700;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 400;
+
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  &.disabled {
+    .form-label, .form-control, .input-section-message, .form-select, .leading-selector {
+      opacity: 30%;
+    }
+  }
+
+  &.error {
+    .form-control, .form-select, .leading-selector {
+      border-color: $system-error-500;
+    }
+
+    .input-section-message {
+      color: $system-error-500
+    }
+  }
+
+  &.read-only {
+    .form-control, .form-select {
+      background-color: $neutrals-200;
+      pointer-events: none;
+    }
+  }
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  font-weight: $input-font-weight;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  gap: 8px;
+  border: $input-border-width solid $input-border-color !important;
+  border-radius: $input-border-radius;
+  background: $input-bg;
+  outline: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    border-color: $neutrals-700;
+  }
+
+  &:focus {
+    border-color: $primary !important;
+    box-shadow: 0 0 0 4px rgba($primary, 0.15)
+  }
+
+  &.disabled {
+    user-select: none;
+    pointer-events: none;
+    opacity: 30%;
+  }
+}

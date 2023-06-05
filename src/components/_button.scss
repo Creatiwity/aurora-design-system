@@ -1,0 +1,287 @@
+button {
+  padding: 0;
+  background-color: transparent;
+}
+
+button,
+.btn {
+  &:disabled {
+    pointer-events: initial;
+    cursor: not-allowed;
+  }
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  min-width: 120px;
+  min-height: 48px;
+  padding: 14px 16px 14px 16px;
+  font-size: 16px;
+  line-height: 20px;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &.btn-sm {
+    border-radius: 8px;
+    min-width: 100px;
+    min-height: 40px;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 16px;
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &.btn-lg {
+    border-radius: 12px;
+    min-width: 156px;
+    min-height: 56px;
+    padding: 16px 24px;
+    font-size: 20px;
+    line-height: 24px;
+
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &.loading {
+    cursor: not-allowed;
+  }
+}
+
+.btn-primary {
+  @include button-variant(
+      $primary,
+      $primary,
+    $color: $white,
+    $hover-background: $primary-600,
+    $hover-border: $primary-600,
+    $hover-color: $white,
+    $active-background: $primary-700,
+    $active-border: $primary-700,
+    $active-color: $white,
+    $disabled-background: $primary,
+    $disabled-border: $primary,
+    $disabled-color: $white
+  );
+
+  .icon {
+    color: $white;
+  }
+
+  &.loading {
+    color: $transparency-white-70 ;
+  }
+}
+
+.btn-secondary {
+  @include button-variant(
+      $white,
+      $neutrals,
+    $color: $black,
+    $hover-background: $white,
+    $hover-border: $neutrals-700,
+    $hover-color: $black,
+    $active-background: $white,
+    $active-border: $neutrals-900,
+    $active-color: $black,
+    $disabled-background: $white,
+    $disabled-border: $neutrals,
+    $disabled-color: $black
+  );
+
+  .icon {
+    color: $black;
+  }
+
+  &.loading {
+    color: $transparency-black-70;
+  }
+}
+
+.btn-tertiary {
+  @include button-variant(
+      transparent,
+      transparent,
+    $color: $black,
+    $hover-background: $neutrals-200,
+    $hover-border: $neutrals-200,
+    $hover-color: $black,
+    $active-background: $neutrals-300,
+    $active-border: $neutrals-300,
+    $active-color: $black,
+    $disabled-background: transparent,
+    $disabled-border: transparent,
+    $disabled-color: $black
+  );
+
+  .icon {
+    color: $black;
+  }
+
+  &.loading {
+    color: $transparency-black-70;
+  }
+}
+
+header {
+  .nav-link {
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 20px;
+    font-size: 16px;
+    color: $black !important;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.nav-link-sm {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &.nav-link-lg {
+      font-size: 20px;
+      line-height: 14px;
+    }
+
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+
+    &.active {
+      color: $primary !important;
+    }
+  }
+}
+
+footer {
+  .nav-link {
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 20px;
+    font-size: 16px;
+    color: $neutrals-700 !important;
+
+    &:hover {
+      color: $neutrals-800;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.nav-link-sm {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &.nav-link-lg {
+      font-size: 20px;
+      line-height: 14px;
+    }
+  }
+}
+
+.nav-pills {
+
+  .nav-link-icon {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.nav-link-icon-sm {
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &.nav-link-icon-lg {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .nav-link {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    color: $black;
+
+    background: transparent;
+    border-radius: $nav-pills-border-radius;
+
+    &.nav-link-sm {
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 16px;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &.nav-link-lg {
+      font-size: 20px;
+      line-height: 14px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.active {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $neutrals-200;
+      &.active {
+        background-color: $primary-600;
+      }
+    }
+
+    &:active {
+      background-color: $neutrals-300;
+
+      &.active {
+        background-color: $primary-700;
+      }
+    }
+  }
+}
+

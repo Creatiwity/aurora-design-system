@@ -1,0 +1,14 @@
+@import "../mixins";
+@import "../variables/effects";
+
+.elevation {
+  @include generate-styles($elevation-levels)
+}
+
+.focus {
+  @include generate-styles($focus-types)
+}
+
+.blur {
+  @include generate-styles($blur-levels)
+}

@@ -1,0 +1,17 @@
+@import "../mixins";
+
+.heading {
+    @include generate-heading-styles($heading-sizes);
+}
+
+.display {
+  @include generate-display-styles($display-sizes);
+}
+
+.label {
+  @include generate-label-styles($label-sizes)
+}
+
+.paragraph {
+  @include generate-paragraph-styles($paragraph-sizes)
+}

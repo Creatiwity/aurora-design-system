@@ -15,7 +15,8 @@
   "files": [
     "index.scss",
     "src",
-    "LICENSE"
+    "LICENSE",
+    "src/icons/link-icon.svg"
   ],
   "dependencies": {
     "bootstrap": "^5.3.0"

@@ -1,0 +1,12 @@
+@import "typo";
+
+@mixin generate-styles($types) {
+  @each $type, $properties in $types {
+    &-#{$type} {
+      @each $property, $value in $properties {
+        #{$property}: $value;
+      }
+      letter-spacing: 0;
+    }
+  }
+}
