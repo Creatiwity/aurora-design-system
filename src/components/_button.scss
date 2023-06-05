@@ -65,18 +65,18 @@ button,
 
 .btn-primary {
   @include button-variant(
-      $primary,
-      $primary,
-    $color: $white,
-    $hover-background: $primary-600,
-    $hover-border: $primary-600,
-    $hover-color: $white,
-    $active-background: $primary-700,
-    $active-border: $primary-700,
-    $active-color: $white,
-    $disabled-background: $primary,
-    $disabled-border: $primary,
-    $disabled-color: $white
+                  $primary,
+                  $primary,
+          $color: $white,
+          $hover-background: $primary-600,
+          $hover-border: $primary-600,
+          $hover-color: $white,
+          $active-background: $primary-700,
+          $active-border: $primary-700,
+          $active-color: $white,
+          $disabled-background: $primary,
+          $disabled-border: $primary,
+          $disabled-color: $white
   );
 
   .icon {
@@ -90,18 +90,18 @@ button,
 
 .btn-secondary {
   @include button-variant(
-      $white,
-      $neutrals,
-    $color: $black,
-    $hover-background: $white,
-    $hover-border: $neutrals-700,
-    $hover-color: $black,
-    $active-background: $white,
-    $active-border: $neutrals-900,
-    $active-color: $black,
-    $disabled-background: $white,
-    $disabled-border: $neutrals,
-    $disabled-color: $black
+                  $white,
+                  $neutrals,
+          $color: $black,
+          $hover-background: $white,
+          $hover-border: $neutrals-700,
+          $hover-color: $black,
+          $active-background: $white,
+          $active-border: $neutrals-900,
+          $active-color: $black,
+          $disabled-background: $white,
+          $disabled-border: $neutrals,
+          $disabled-color: $black
   );
 
   .icon {
@@ -115,18 +115,18 @@ button,
 
 .btn-tertiary {
   @include button-variant(
-      transparent,
-      transparent,
-    $color: $black,
-    $hover-background: $neutrals-200,
-    $hover-border: $neutrals-200,
-    $hover-color: $black,
-    $active-background: $neutrals-300,
-    $active-border: $neutrals-300,
-    $active-color: $black,
-    $disabled-background: transparent,
-    $disabled-border: transparent,
-    $disabled-color: $black
+                  transparent,
+                  transparent,
+          $color: $black,
+          $hover-background: $neutrals-200,
+          $hover-border: $neutrals-200,
+          $hover-color: $black,
+          $active-background: $neutrals-300,
+          $active-border: $neutrals-300,
+          $active-color: $black,
+          $disabled-background: transparent,
+          $disabled-border: transparent,
+          $disabled-color: $black
   );
 
   .icon {
@@ -186,6 +186,11 @@ footer {
 
     &:hover {
       color: $neutrals-800;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $neutrals-900 !important;
     }
 
     svg {
