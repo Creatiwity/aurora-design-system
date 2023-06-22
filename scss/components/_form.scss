@@ -155,7 +155,7 @@
     }
   }
 
-  .form-group-message {
+  .invalid-feedback {
     width: 100%;
     padding: 12px;
     color: $neutrals-700;
@@ -167,7 +167,7 @@
   }
 
   &.disabled {
-    .form-label, .form-control, .form-group-message, .form-select, .leading-selector {
+    .form-label, .form-control, .invalid-feedback, .form-select, .leading-selector {
       opacity: 30%;
     }
   }
@@ -177,7 +177,7 @@
       border-color: $system-error-500;
     }
 
-    .form-group-message {
+    .invalid-feedback {
       color: $system-error-500
     }
   }
