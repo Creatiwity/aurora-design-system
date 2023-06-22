@@ -1,10 +1,10 @@
 {
-  "name": "aurora-design-system",
-  "version": "1.0.0",
+  "name": "@creatiwity/aurora-design-system",
+  "version": "1.0.1",
   "description": "Aurora Design System",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Creatiwity/aurora-design-system"
+    "url": "git+https://github.com/Creatiwity/aurora-design-system.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,17 @@
   "files": [
     "scss",
     "LICENSE"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/Creatiwity/aurora-design-system/issues"
+  },
+  "homepage": "https://github.com/Creatiwity/aurora-design-system#readme",
+  "main": "index.scss",
+  "keywords": [
+    "scss",
+    "aurora"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
