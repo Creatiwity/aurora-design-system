@@ -1,4 +1,4 @@
-.input-section {
+.form-group {
   .form-label {
     display: flex;
     align-items: center;
@@ -155,7 +155,7 @@
     }
   }
 
-  .input-section-message {
+  .form-group-message {
     width: 100%;
     padding: 12px;
     color: $neutrals-700;
@@ -167,7 +167,7 @@
   }
 
   &.disabled {
-    .form-label, .form-control, .input-section-message, .form-select, .leading-selector {
+    .form-label, .form-control, .form-group-message, .form-select, .leading-selector {
       opacity: 30%;
     }
   }
@@ -177,7 +177,7 @@
       border-color: $system-error-500;
     }
 
-    .input-section-message {
+    .form-group-message {
       color: $system-error-500
     }
   }
