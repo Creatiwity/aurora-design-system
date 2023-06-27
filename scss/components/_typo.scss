@@ -1,4 +1,83 @@
-@import "../mixins";
+$heading-sizes: (
+        xxl: (
+                line-height: 60px,
+                font-size: 48px,
+                letter-spacing: 0.05em,
+        ),
+        xl: (
+                line-height: 52px,
+                font-size: 40px,
+                letter-spacing: 0.03em,
+        ),
+        lg: (
+                line-height: 44px,
+                font-size: 32px,
+                letter-spacing: 0.01em,
+        ),
+        md: (
+                line-height: 36px,
+                font-size: 26px,
+                letter-spacing: 0,
+        ),
+        sm: (
+                line-height: 32px,
+                font-size: 20px,
+                letter-spacing: 0,
+        ),
+);
+
+$display-sizes: (
+        lg: (
+                line-height: 112px,
+                font-size: 96px,
+        ),
+        md: (
+                line-height: 64px,
+                font-size: 52px,
+        ),
+        sm: (
+                line-height: 52px,
+                font-size: 44px,
+        ),
+);
+
+$label-sizes: (
+        lg: (
+                line-height: 24px,
+                font-size: 20px,
+        ),
+        md: (
+                line-height: 20px,
+                font-size: 16px,
+        ),
+        sm: (
+                line-height: 16px,
+                font-size: 14px,
+        ),
+        xs: (
+                line-height: 14px,
+                font-size: 12px,
+        ),
+);
+
+$paragraph-sizes: (
+        lg: (
+                line-height: 32px,
+                font-size: 18px,
+        ),
+        md: (
+                line-height: 28px,
+                font-size: 16px,
+        ),
+        sm: (
+                line-height: 24px,
+                font-size: 14px,
+        ),
+        xs: (
+                line-height: 16px,
+                font-size: 11px,
+        ),
+);
 
 .heading {
     @include generate-heading-styles($heading-sizes);

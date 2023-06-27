@@ -1,5 +1,50 @@
 @import "../mixins";
 
+$blur-levels: (
+        strong: (
+                background: rgba(255, 255, 255, 0.5),
+                backdrop-filter: blur(4px)
+        ),
+        medium: (
+                background: rgba(255, 255, 255, 0.5),
+                backdrop-filter: blur(2.5px)
+        ),
+        light: (
+                background: rgba(255, 255, 255, 0.5),
+                backdrop-filter: blur(1px),
+        )
+);
+
+$focus-types: (
+        primary: (
+                box-shadow: 0 0 0 4px rgba($primary, 0.15)
+        ),
+        success: (
+                box-shadow: 0 0 0 4px rgba($system-success-500, 0.15)
+        ),
+        warning: (
+                box-shadow: 0 0 0 4px rgba($system-warning-500, 0.15)
+        ),
+        error: (
+                box-shadow: 0 0 0 4px rgba($system-error-500, 0.15)
+        ),
+        information: (
+                box-shadow: 0 0 0 4px rgba(44, 110, 238, 0.15)
+        ),
+);
+
+$elevation-levels: (
+        strong: (
+                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16)
+        ),
+        medium: (
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12)
+        ),
+        light: (
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08)
+        ),
+);
+
 .elevation {
   @include generate-styles($elevation-levels)
 }
