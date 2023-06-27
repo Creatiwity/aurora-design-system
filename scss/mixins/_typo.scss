@@ -1,5 +1,3 @@
-@import "../variables";
-
 @mixin generate-heading-styles($sizes) {
   @each $size, $properties in $sizes {
     &-#{$size} {

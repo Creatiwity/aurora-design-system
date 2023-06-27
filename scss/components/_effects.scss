@@ -1,5 +1,4 @@
 @import "../mixins";
-@import "../variables/effects";
 
 .elevation {
   @include generate-styles($elevation-levels)
